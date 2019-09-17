@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#546E7A</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#3F51B5</color>
+    <color name="colorEdtBorder">#263238</color>
+    <color name="colorBorderSuccess">#43A047</color>
+    <color name="colorSuccess">#43A047</color>
+    <color name="colorBorderFail">#E53935</color>
+    <color name="colorFail">#E53935</color>
+    <color name="colorNormal">#1E88E5</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

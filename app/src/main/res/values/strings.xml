@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">Contas</string>
+
+    <string name="title_nova_despesa">NOVA DESPESA</string>
+    <string name="lbl_categoria">categoria</string>
+    <string name="lbl_descricao">descrição</string>
+    <string name="lbl_valor">valor</string>
+    <string name="lbl_receita">receita</string>
+    <string name="menu_receita">Receita</string>
+    <string name="menu_despesa">Despesa</string>
+    <string name="menu_conta">Conta</string>
+    <string name="title_novo">Novo</string>
+
+    <string-array name="categorias">
+        <item>Outros</item>
+        <item>Almoço</item>
+        <item>Jantar</item>
+        <item>Lanche</item>
+        <item>Besteiras</item>
+        <item>Escola</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

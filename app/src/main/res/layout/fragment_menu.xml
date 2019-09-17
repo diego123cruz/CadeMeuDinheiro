@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.MenuNovoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lbl_novo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/title_nova_despesa"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:background="@color/colorNormal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btn_nova_receita"
+            app:layout_constraintTop_toBottomOf="@id/lbl_novo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Receita"
+            android:textSize="18dp"
+            android:textColor="@color/colorSuccess"
+            android:background="@drawable/btn_background_success"
+            />
+
+        <Button
+            android:id="@+id/btn_nova_despesa"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_nova_receita"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/menu_despesa"
+            android:textSize="18dp"
+            android:textColor="@color/colorFail"
+            android:background="@drawable/btn_background_fail"
+            />
+
+        <Button
+            android:id="@+id/btn_nova_conta"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_nova_despesa"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/menu_conta"
+            android:textSize="18dp"
+            android:textColor="@color/colorNormal"
+            android:background="@drawable/btn_background_normal"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+conta
+	id - Int
+	created_at - Date
+	created_by - Date
+	category - Int
+	description - String
+	value - Double
+	expiry - Date
+	payday - Int
+	payment_installment_total - Int
+	payment_installment_atual - Int
+	overdue_account - Date
+	paid_account - Date
+	
+payday
+	id - Int
+	category - Int
+	description - String
+	date - Date
+	
+despesa
+	id - Int
+	created_at - Date
+	created_by - Date
+	category - Int
+	description - String
+	value - Double
+	
+category
+	id - Int
+	description - String
+	
+receita
+	id - Int
+	created_at - Date
+	created_by - Date
+	category - Int
+	description - String
+	value - Double
+
+user
+	id - Int
+	email - String
+	password - String
+	
+	
