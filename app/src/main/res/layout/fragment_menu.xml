@@ -14,7 +14,7 @@
             android:id="@+id/lbl_novo"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="@string/title_nova_despesa"
+            android:text="@string/title_novo"
             android:textAlignment="center"
             android:textSize="18dp"
             android:background="@color/colorNormal"

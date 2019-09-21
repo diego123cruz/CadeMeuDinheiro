@@ -8,4 +8,11 @@
         android:title="New"
         android:visible="true"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_menu"
+        android:icon="@drawable/ic_menu_24dp"
+        android:title="Menu"
+        android:visible="true"
+        app:showAsAction="always" />
 </menu>

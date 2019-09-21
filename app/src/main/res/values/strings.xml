@@ -14,11 +14,13 @@
 
     <string-array name="categorias">
         <item>Outros</item>
-        <item>Almoço</item>
-        <item>Jantar</item>
-        <item>Lanche</item>
-        <item>Besteiras</item>
-        <item>Escola</item>
+        <item>Alimentação</item>
+        <item>Casa</item>
+        <item>Educação</item>
+        <item>Saúde</item>
+        <item>Transporte</item>
+        <item>Diversão</item>
+        <item>Cuidados pessoais</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

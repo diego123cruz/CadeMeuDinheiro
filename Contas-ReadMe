@@ -1,7 +1,8 @@
 conta
-	id - Int
+	id - Long
+	id_extenal - Long
 	created_at - Date
-	created_by - Date
+	created_by - Int
 	category - Int
 	description - String
 	value - Double
@@ -19,9 +20,10 @@ payday
 	date - Date
 	
 despesa
-	id - Int
+	id - Long
+	id_extenal - Long
 	created_at - Date
-	created_by - Date
+	created_by - Int
 	category - Int
 	description - String
 	value - Double
@@ -31,16 +33,33 @@ category
 	description - String
 	
 receita
-	id - Int
+	id - Long
+	id_extenal - Long
 	created_at - Date
-	created_by - Date
+	created_by - Int
 	category - Int
 	description - String
 	value - Double
 
 user
-	id - Int
+	id - Long
 	email - String
 	password - String
+	
+	
+	
+// Categorias
+<string-array name="categorias">
+	<item>Outros</item>
+	<item>Alimentação</item>
+	<item>Casa</item>
+	<item>Educação</item>
+	<item>Saúde</item>
+	<item>Transporte</item>
+	<item>Diversão</item>
+	<item>Cuidados pessoais</item>
+</string-array>
+	
+	
 	
 	

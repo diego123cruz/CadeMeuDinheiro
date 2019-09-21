@@ -1,12 +1,14 @@
 package br.com.diegocruz
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import br.com.diegocruz.view.DespesaFragment
+import br.com.diegocruz.view.DespesasListaActivity
 import br.com.diegocruz.view.MenuNovoFragment
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +65,11 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.menu_novo -> {
                 showMenu()
+                true
+            }
+            R.id.menu_menu -> {
+                val intent = Intent(this, DespesasListaActivity::class.java)
+                startActivity(intent)
                 true
             }
 
