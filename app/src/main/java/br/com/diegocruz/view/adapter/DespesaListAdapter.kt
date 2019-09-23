@@ -1,8 +1,6 @@
 package br.com.diegocruz.view.adapter
 
 import android.content.Context
-import android.content.res.Resources
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.diegocruz.R
 import br.com.diegocruz.extesions.formateDDMMAAAAString
 import br.com.diegocruz.extesions.formateHHmmString
+import br.com.diegocruz.getCategory
+import br.com.diegocruz.getIcon
 import br.com.diegocruz.model.Despesa
 
 interface DespesaItem {
@@ -27,7 +27,6 @@ class DespesaListAdapter : RecyclerView.Adapter<DespesaViewHolder> {
 
     constructor(context: Context) : super() {
         this.cxt = context
-        Log.d("CRUZDATA", "==================================================")
     }
 
     fun setListener(despesaItem: DespesaItem){
@@ -70,7 +69,7 @@ class DespesaListAdapter : RecyclerView.Adapter<DespesaViewHolder> {
         holder.img.setImageDrawable(cxt?.getDrawable(getIcon(despesa.category)))
 
         holder.destription.text = despesa.description
-        holder.category.text = getCategory(despesa.category)
+        holder.category.text = getCategory(cxt,despesa.category)
         holder.time.text = despesaDate.formateHHmmString()
         holder.value.text = despesa.valeu_despesa.toString()
 
@@ -88,36 +87,5 @@ class DespesaListAdapter : RecyclerView.Adapter<DespesaViewHolder> {
             delegate?.onLongTapItemDespesa(despesa)
             return@setOnLongClickListener true
         }
-    }
-
-    fun getCategory(categoryId: Int) : String {
-
-        var category : String = "Sem categoria"
-        if (cxt != null) {
-            val res: Resources = cxt!!.resources
-            val categoryList = res.getStringArray(R.array.categorias)
-            try {
-                category = categoryList[categoryId].toString()
-            }
-            catch (e : Exception){
-                category = "Erro categoria"
-            }
-        }
-
-        return category
-    }
-
-    fun getIcon(categoryId: Int) : Int {
-        when (categoryId) {
-            0 -> return R.drawable.ic_outros
-            1 -> return R.drawable.ic_alimentacao
-            2 -> return R.drawable.ic_casa
-            3 -> return R.drawable.ic_educacao
-            4 -> return R.drawable.ic_saude
-            5 -> return R.drawable.ic_transport
-            6 -> return R.drawable.ic_diversao
-            7 -> return R.drawable.ic_cuidado_pessoal
-        }
-        return R.drawable.ic_outros
     }
 }

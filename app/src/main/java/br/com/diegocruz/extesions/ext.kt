@@ -1,4 +1,4 @@
-package br.com.diegocruz
+package br.com.diegocruz.extesions
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.diegocruz.model.Despesa
 import io.realm.Realm
+import io.realm.Sort
 
 class DespesasListaViewModel : ViewModel() {
 
@@ -16,9 +17,13 @@ class DespesasListaViewModel : ViewModel() {
 
     fun getDespesas(){
         val realm = Realm.getDefaultInstance()
+        try {
+            val despesasResultList = realm.where(Despesa::class.java).findAll().sort("created_at", Sort.DESCENDING).toList()
 
-        val despesasResult = realm.where(Despesa::class.java).findAll()
-
-        despasas.value = despesasResult.toList()
+            val copyDespesaList = realm.copyFromRealm(despesasResultList)
+            despasas.value = copyDespesaList
+        }finally {
+            realm.close()
+        }
     }
 }

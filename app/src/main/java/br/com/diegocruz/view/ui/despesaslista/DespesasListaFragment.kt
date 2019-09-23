@@ -1,17 +1,18 @@
 package br.com.diegocruz.view.ui.despesaslista
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.diegocruz.R
 import br.com.diegocruz.model.Despesa
-import br.com.diegocruz.view.DespesaFragment
-import br.com.diegocruz.view.MenuNovoFragment
+import br.com.diegocruz.view.InsertEditDespesaActivity
 import br.com.diegocruz.view.adapter.DespesaItem
 import br.com.diegocruz.view.adapter.DespesaListAdapter
 import kotlinx.android.synthetic.main.despesas_lista_fragment.*
@@ -46,23 +47,22 @@ class DespesasListaFragment : Fragment() {
             adapter.updateDespesaList(despesas)
 
         })
-        viewModel.getDespesas()
+    }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getDespesas()
     }
 
     val listenerItemTap = object : DespesaItem{
         override fun onLongTapItemDespesa(despesa: Despesa) {
-
-            val fragmentManager = activity?.supportFragmentManager
-            val fragmentTransaction = fragmentManager?.beginTransaction()
-            val fragment = DespesaFragment()
-            fragment.setDespesa(despesa)
-            fragmentTransaction?.replace(R.id.container, fragment)
-            fragmentTransaction?.commit()
+            val intent = Intent(context, InsertEditDespesaActivity::class.java)
+            intent.putExtra("despesa_id", despesa.id)
+            context?.startActivity(intent)
         }
 
         override fun onTapItemDespesa(despesa: Despesa) {
-
+            Toast.makeText(context, "Pressione e segure para editar", Toast.LENGTH_SHORT).show()
         }
 
     }

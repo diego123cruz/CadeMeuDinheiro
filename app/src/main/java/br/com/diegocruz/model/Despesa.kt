@@ -5,19 +5,6 @@ import io.realm.annotations.Ignore
 import io.realm.annotations.PrimaryKey
 import java.util.*
 
-
-/*
-Despesa
-
-id - Int
-id_extenal - Int
-created_at - Date
-created_by - Date
-category - Int
-description - String
-value - Double
- */
-
 open class Despesa : RealmObject() {
     @PrimaryKey
     var id : Long = 0

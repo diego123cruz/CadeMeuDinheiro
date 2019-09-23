@@ -7,9 +7,9 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import br.com.diegocruz.view.DespesaFragment
 import br.com.diegocruz.view.DespesasListaActivity
 import br.com.diegocruz.view.MenuNovoFragment
+import br.com.diegocruz.view.ui.insertdespesa.InsertEditDespesaFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     fun showDespesaFragment(){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragment = DespesaFragment()
+        val fragment = InsertEditDespesaFragment()
         fragmentTransaction.replace(R.id.main_fragment, fragment)
         fragmentTransaction.commit()
     }
@@ -75,6 +75,5 @@ class MainActivity : AppCompatActivity() {
 
             else -> super.onOptionsItemSelected(item)
         }
-
     }
 }

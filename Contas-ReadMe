@@ -47,7 +47,6 @@ user
 	password - String
 	
 	
-	
 // Categorias
 <string-array name="categorias">
 	<item>Outros</item>
