@@ -23,7 +23,8 @@ class InsertEditDespesaViewModel : ViewModel() {
         val realm = Realm.getDefaultInstance()
         try{
             realm.beginTransaction()
-            despesa.deleteFromRealm()
+            val despesaDelete = realm.where(Despesa::class.java).equalTo("id", despesa.id).findFirst()
+            despesaDelete?.deleteFromRealm()
             realm.commitTransaction()
         }
         finally {
