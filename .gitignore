@@ -12,3 +12,5 @@
 /captures
 .externalNativeBuild
 .cxx
+diego_key_android.jks
+keystore.properties
